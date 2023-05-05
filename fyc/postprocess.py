@@ -94,7 +94,7 @@ if __name__ == "__main__":
 
     fig, axs = plt.subplots(figsize=(9.0, 3.0), ncols=3)
     for i, N in enumerate([100, 500, 1000]):
-        vals = data = df["max_F"].astype(float).values[:N]
+        vals = df["max_F"].astype(float).values[:N]
         sns.histplot(vals, ax=axs[i], kde=True, stat="count")
         axs[i].set_xlabel("max |F|")
         axs[i].set_title(
